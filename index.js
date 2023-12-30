@@ -24,7 +24,8 @@ bot.on('inline_query', async (ctx) => {
     const query = ctx.inlineQuery.query;
 
     if (query) {
-        search(query);
+        const results = await search(query);
+        ctx.answerInlineQuery(results);
     }
 });
 
