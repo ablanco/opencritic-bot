@@ -16,10 +16,10 @@ const baseOptions = {
 const _renderGameData = function (gameDetails) {
     return `*${gameDetails.name}*
 Tier: _${gameDetails.tier}_
-Median score: ${Math.round(gameDetails.medianScore)}
-Number of reviews: ${gameDetails.numReviews}
 Critics score: ${Math.round(gameDetails.topCriticScore)}
 Number of critics reviews: ${gameDetails.numTopCriticReviews}
+Median score: ${Math.round(gameDetails.medianScore)}
+Number of reviews: ${gameDetails.numReviews}
 
 [Open in OpenCritic](${gameDetails.url})`;
 };
