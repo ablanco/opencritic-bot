@@ -4,6 +4,8 @@
 import { Telegraf } from 'telegraf';
 import Settings from './src/settings.js';
 
+import { search } from './src/client.js';
+
 const bot = new Telegraf(Settings.token);
 
 const helpHTML = [
@@ -22,7 +24,7 @@ bot.on('inline_query', async (ctx) => {
     const query = ctx.inlineQuery.query;
 
     if (query) {
-        console.log(query);
+        search(query);
     }
 });
 
